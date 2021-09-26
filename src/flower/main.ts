@@ -28,7 +28,7 @@ const sketch = (p: p5) => {
     // 楕円を描く
     p.ellipse(p.frameCount / 2, 0, p.frameCount, p.frameCount / 3);
     // 「描画色1の強さ」を少し弱くする
-    color1amount *= 0.995;
+    color1amount *= 0.997;
   }
 }
 
