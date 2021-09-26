@@ -3,8 +3,8 @@ import p5 from "p5";
 const sketch = (p: p5) => {
 
   // 描画色1・2
-  const color1 = p.color("#fffbe3");
-  const color2 = p.color("#24495c");
+  const color1 = p.color("#ffffe0");
+  const color2 = p.color("#006400");
   // 描画色1の強さ
   let color1amount = 1;
   
