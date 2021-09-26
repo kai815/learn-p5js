@@ -23,8 +23,8 @@ const sketch = (p: p5) => {
     p.fill(p.lerpColor(color2, color1, color1amount));
     // 画面中央を原点に
     p.translate(p.width / 2, p.height / 2);
-    // フレーム数分（1フレームあたり13度）回転させる
-    p.rotate(p.frameCount * 13);
+    // フレーム数分（1フレームあたり10度）回転させる
+    p.rotate(p.frameCount * 10);
     // 楕円を描く
     p.ellipse(p.frameCount / 2, 0, p.frameCount, p.frameCount / 3);
     // 「描画色1の強さ」を少し弱くする
