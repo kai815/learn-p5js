@@ -31,7 +31,7 @@ const sketch = (p: p5) => {
   /** 背景色 */
   const BG_COLOR = "#171d21";
   /** バブルの色 */
-  const BUBBLE_COLOR = "#99FFFF";
+  const BUBBLE_COLOR = "#FF3366";
   /** 生成したバブルを格納する配列 */
   let bubbles: Bubble[] = [];
   /** 最後にカーソルが動いた時間（フレーム） */
