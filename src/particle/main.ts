@@ -25,7 +25,7 @@ const sketch = (p: p5) => {
   /** 最小速度（画面の高さを1として、1フレームごとに動く量の最小値） */
   const MINSPEED = 0.005;
   /** 最大速度（画面の高さを1として、1フレームごとに動く量の最大値） */
-  const MAXSPEED = 0.02;
+  const MAXSPEED = 0.03;
   /** カーソル移動後、その位置からバブルを出し続ける時間（フレーム） */
   const MOUSE_ACTIVE_FRAMES = 120;
   /** 背景色 */
