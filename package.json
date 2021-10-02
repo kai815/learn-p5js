@@ -6,7 +6,9 @@
     "dev:flower": "parcel src/flower/index.html --open",
     "build:flower": "parcel build src/flower/index.html",
     "dev:particle": "parcel src/particle/index.html --open",
-    "build:particle": "parcel build src/particle/index.html"
+    "build:particle": "parcel build src/particle/index.html",
+    "dev:code": "parcel src/codeprogramingwithp5js/index.html --open",
+    "build:code": "parcel build src/codeprogramingwithp5js/index.html"
   },
   "devDependencies": {
     "@types/p5": "^1.3.1",
