@@ -1,22 +1,22 @@
 import p5 from "p5";
 
 const sketch = (p: p5) => {
-  let circleX = 100;
+  let squareSize;
+  let lineWidth;
   p.setup = () => {
     p.createCanvas(400, 300);
+    p.background(100);
   };
 
-  p.draw = () => {  
-    p.background(0);
-    p.noStroke();
-    p.fill(255)
-    p.circle(circleX,150,64);
-    circleX = circleX + 1;
+  p.draw = () => {
+    lineWidth = p.random(4,28);
+    squareSize = p.random(50,250)
+    p.rectMode(p.CENTER);
+    p.strokeWeight(lineWidth)
+    p.stroke(0,0,255)
+    p.fill(0,255,0, 10);
+    p.square(200,150, squareSize)
   };
-
-  p.mousePressed = () => {
-    circleX = 0;
-  }
 };
 
 new p5(sketch);
