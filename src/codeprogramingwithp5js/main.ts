@@ -1,21 +1,21 @@
 import p5 from "p5";
 
 const sketch = (p: p5) => {
-  let squareSize;
-  let lineWidth;
+  let x,y,r,g,b;
   p.setup = () => {
-    p.createCanvas(400, 300);
-    p.background(100);
+    p.createCanvas(p.windowWidth, p.windowHeight);
+    p.background(0);
   };
 
   p.draw = () => {
-    lineWidth = p.random(4,28);
-    squareSize = p.random(50,250)
-    p.rectMode(p.CENTER);
-    p.strokeWeight(lineWidth)
-    p.stroke(0,0,255)
-    p.fill(0,255,0, 10);
-    p.square(200,150, squareSize)
+    r = p.random(255);
+    g = 0;
+    b = p.random(255);
+    x = p.random(p.width);
+    y = p.random(p.height);
+    p.noStroke()
+    p.fill(r,g,b, 100);
+    p.circle(x,y, 24)
   };
 };
 
