@@ -12,14 +12,17 @@ const sketch = (p: p5) => {
 
   p.draw = () => {
     p.noStroke()
-    p.fill(r,g,b, 100);
-    p.circle(p.mouseX,p.mouseY,diameter);
-  };
-  p.mousePressed = () => {
     r = p.random(50,255);
     g = p.random(50,255);
     b = p.random(50,255);
+    p.fill(r,g,b, 100);
+    p.circle(p.mouseX,p.mouseY,diameter);
+  };
+  p.mouseMoved = () => {
     diameter = p.random(16,72);
+  }
+  p.mousePressed = ()=>{
+    p.background(0);
   }
 };
 
