@@ -1,29 +1,19 @@
 import p5 from "p5";
 
 const sketch = (p: p5) => {
-  let r = 255;
-  let g = 255;
-  let b = 255;
-  let diameter = 24;
+  let r = 0;
+  let b = 255
   p.setup = () => {
-    p.createCanvas(p.windowWidth, p.windowHeight);
-    p.background(0);
+    p.createCanvas(600, 400);
   };
 
   p.draw = () => {
-    p.noStroke()
-    r = p.random(50,255);
-    g = p.random(50,255);
-    b = p.random(50,255);
-    p.fill(r,g,b, 100);
-    p.circle(p.mouseX,p.mouseY,diameter);
+    r = p.map(p.mouseX,0,600,0,255)
+    b = p.map(p.mouseX,0,600,255,0)
+    p.background(r,0,b)
+    p.fill(250,118, 222);
+    p.ellipse(p.mouseX,200,64,64)
   };
-  p.mouseMoved = () => {
-    diameter = p.random(16,72);
-  }
-  p.mousePressed = ()=>{
-    p.background(0);
-  }
 };
 
 new p5(sketch);
