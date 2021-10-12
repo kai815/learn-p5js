@@ -1,18 +1,28 @@
 import p5 from "p5";
 
 const sketch = (p: p5) => {
-  let r = 0;
-  let b = 255
+  let x = 200;
+  let y = 200;
+  let extraCanvas;
   p.setup = () => {
-    p.createCanvas(600, 400);
+    p.createCanvas(400, 400);
+    extraCanvas = p.createGraphics(400, 400);
+    extraCanvas.clear();
+    p.background(0);
   };
 
   p.draw = () => {
-    r = p.map(p.mouseX,0,600,0,255)
-    b = p.map(p.mouseX,0,600,255,0)
-    p.background(r,0,b)
-    p.fill(250,118, 222);
-    p.ellipse(p.mouseX,200,64,64)
+    p.background(0)
+    x += p.random(-5, 5);
+    y += p.random(-5, 5);
+    let starX = p.random(p.width);
+    let starY = p.random(p.height);
+    extraCanvas.ellipse(starX, starY, 10, 10);
+    p.image(extraCanvas, 0, 0);
+    p.fill(255, 0, 0);
+    p.stroke(255);
+    p.rectMode(p.CENTER);
+    p.rect(x, y, 20, 20);
   };
 };
 
