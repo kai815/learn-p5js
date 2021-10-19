@@ -12,29 +12,18 @@ const sketch = (p: p5) => {
   };
 
   p.draw = () => {
-    p.background(0);
-    move();
-    bounce();
-    display();
+    
+    p.background(50);
+    lollipop(100, 100, 50);
+    lollipop(300, 200, 150);
+    lollipop(400, 50, 100);
   };
-  const bounce = () => {
-    if (ball.x > p.width || ball.x < 0) {
-      ball.xspeed = ball.xspeed * -1;
-    }
+  const lollipop = (x:number, y:number, diameter:number) => {
+    p.fill(0, 200, 255);
+    p.rect(x - 10, y, 20, 150);
   
-    if (ball.y > p.height || ball.y < 0) {
-      ball.yspeed = ball.yspeed * -1;
-    }
-  }
-  const display = () => {
-    p.stroke(255);
-    p.strokeWeight(4);
-    p.fill(200, 0, 200);
-    p.ellipse(ball.x, ball.y, 24, 24);
-  }
-  const move = () => {
-    ball.x = ball.x + ball.xspeed;
-    ball.y = ball.y + ball.yspeed;
+    p.fill(255, 0, 200);
+    p.ellipse(x, y, diameter, diameter);
   }
   
 };
