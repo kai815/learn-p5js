@@ -12,11 +12,11 @@ const sketch = (p: p5) => {
   };
 
   p.draw = () => {
-    
     p.background(50);
     lollipop(100, 100, 50);
     lollipop(300, 200, 150);
     lollipop(400, 50, 100);
+    lollipop(200, 100, 20);
   };
   const lollipop = (x:number, y:number, diameter:number) => {
     p.fill(0, 200, 255);
