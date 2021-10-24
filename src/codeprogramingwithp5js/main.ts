@@ -1,30 +1,21 @@
 import p5 from "p5";
+import {Bubble} from "./Bubble";
 
 const sketch = (p: p5) => {
-  let ball = {
-    x: 300,
-    y: 200,
-    xspeed: 4,
-    yspeed: -3
-  };
+  let bubble1,bubble2;
   p.setup = () => {
     p.createCanvas(600, 400);
   };
 
   p.draw = () => {
     p.background(50);
-    lollipop(100, 100, 50);
-    lollipop(300, 200, 150);
-    lollipop(400, 50, 100);
-    lollipop(200, 100, 20);
+    bubble1 = new Bubble(p);
+    bubble2 = new Bubble(p);
+    bubble1.move();
+    bubble1.show();
+    bubble2.move();
+    bubble2.show();
   };
-  const lollipop = (x:number, y:number, diameter:number) => {
-    p.fill(0, 200, 255);
-    p.rect(x - 10, y, 20, 150);
-  
-    p.fill(255, 0, 200);
-    p.ellipse(x, y, diameter, diameter);
-  }
   
 };
 
