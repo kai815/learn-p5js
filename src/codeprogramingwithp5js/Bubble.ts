@@ -3,10 +3,12 @@ import p5 from "p5";
 export class Bubble {
   x: number;
   y: number;
+  r: number; 
   p:p5
-  constructor(p:p5){
-    this.x = 200;
-    this.y = 150;
+  constructor(x:number, y:number, r:number, p:p5){
+    this.x = x;
+    this.y = y;
+    this.r = r;
     this.p = p
   }
   move(){ 
@@ -17,6 +19,6 @@ export class Bubble {
     this.p.stroke(255)
     this.p.strokeWeight(4);
     this.p.noFill();
-    this.p.ellipse(this.x,this.y,24,24)
+    this.p.ellipse(this.x,this.y, this.r * 2)
   }
 }

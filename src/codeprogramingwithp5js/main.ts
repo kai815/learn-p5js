@@ -9,8 +9,8 @@ const sketch = (p: p5) => {
 
   p.draw = () => {
     p.background(50);
-    bubble1 = new Bubble(p);
-    bubble2 = new Bubble(p);
+    bubble1 = new Bubble(100,200,40,p);
+    bubble2 = new Bubble(50,150,10,p);
     bubble1.move();
     bubble1.show();
     bubble2.move();
