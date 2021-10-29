@@ -20,7 +20,7 @@ export class Bubble {
     // this.p.strokeWeight(4);
     // this.p.noFill();
     this.p.noStroke();
-    this.p.fill(255,20)
+    this.p.fill(200,100)
     this.p.ellipse(this.x,this.y, this.r * 2)
   }
 }
