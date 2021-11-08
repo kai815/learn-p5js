@@ -21,7 +21,7 @@ export class Particle {
   // creation of a particle.
     createParticle() {
       this.p.noStroke();
-      this.p.fill('rgba(200,169,169,0.5)');
+      this.p.fill('rgba(0,200,150,0.5)');
       this.p.circle(this.x,this.y,this.r);
     }
   
@@ -41,7 +41,7 @@ export class Particle {
       particles.forEach(element =>{
         let dis = this.p.dist(this.x,this.y,element.x,element.y);
         if(dis<85) {
-          this.p.stroke('rgba(255,255,255,0.04)');
+          this.p.stroke('rgba(0,255,255,0.09)');
           this.p.line(this.x,this.y,element.x,element.y);
         }
       });
