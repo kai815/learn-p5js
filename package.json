@@ -12,7 +12,10 @@
     "dev:wave": "parcel src/wave/index.html --open",
     "build:wave": "parcel build src/wave/index.html",
     "dev:particle-p5": "parcel src/particle-p5doc/index.html --open",
-    "build:particle-p5": "parcel build src/particle-p5doc/index.html"
+    "build:particle-p5": "parcel build src/particle-p5doc/index.html",
+    "dev:3d": "parcel src/3d/index.html --open",
+    "build:3d": "parcel build src/3d/index.html"
+
   },
   "devDependencies": {
     "@types/p5": "^1.3.1",
