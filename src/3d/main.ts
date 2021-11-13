@@ -15,7 +15,7 @@ const sketch = (p: p5) => {
     p.rotateX(p.frameCount * 0.01);
     p.rotateY(p.frameCount * 0.01);
     p.plane(200);
-    // p.pop();
+    p.pop();
   };
 };
 
