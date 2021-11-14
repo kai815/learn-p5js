@@ -7,14 +7,23 @@ const sketch = (p: p5) => {
 
   p.draw = () => {
     p.background(250);
-    //平面の描画
-    // p.translate(-240, -100, 0);
+    //平面
+    p.translate(-240, -100, 0);
     p.normalMaterial();
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
     p.rotateY(p.frameCount * 0.01);
-    p.plane(200);
+    p.plane(70);
+    p.pop();
+
+    //立方体
+    p.translate(240, 0, 0);
+    p.push();
+    p.rotateZ(p.frameCount * 0.01);
+    p.rotateX(p.frameCount * 0.01);
+    p.rotateY(p.frameCount * 0.01);
+    p.box(70, 70, 70);
     p.pop();
   };
 };
