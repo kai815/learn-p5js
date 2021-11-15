@@ -25,6 +25,15 @@ const sketch = (p: p5) => {
     p.rotateY(p.frameCount * 0.01);
     p.box(70, 70, 70);
     p.pop();
+
+    //円柱
+    p.translate(240, 0, 0);
+    p.push();
+    p.rotateZ(p.frameCount * 0.01);
+    p.rotateX(p.frameCount * 0.01);
+    p.rotateY(p.frameCount * 0.01);
+    p.cylinder(70, 70);
+    p.pop();
   };
 };
 
