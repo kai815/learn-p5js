@@ -43,6 +43,15 @@ const sketch = (p: p5) => {
     p.rotateY(p.frameCount * 0.01);
     p.cone(70, 70);
     p.pop();
+
+    //ドーナッツ
+    p.translate(240, 0, 0);
+    p.push();
+    p.rotateZ(p.frameCount * 0.01);
+    p.rotateX(p.frameCount * 0.01);
+    p.rotateY(p.frameCount * 0.01);
+    p.torus(70, 20);
+    p.pop();
   };
 };
 
