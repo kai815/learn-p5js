@@ -7,9 +7,13 @@ const sketch = (p: p5) => {
 
   p.draw = () => {
     p.background(250);
+    const red =p.color(255, 0, 0);
+    const green =p.color(0, 255, 0);
+    const blue =p.color(0, 0, 255);
     //平面
     p.translate(-240, -100, 0);
     p.normalMaterial();
+    p.fill(red);
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
@@ -19,6 +23,7 @@ const sketch = (p: p5) => {
 
     //立方体
     p.translate(240, 0, 0);
+    p.fill(green);
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
@@ -28,6 +33,7 @@ const sketch = (p: p5) => {
 
     //円柱
     p.translate(240, 0, 0);
+    p.fill(blue);
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
@@ -37,6 +43,7 @@ const sketch = (p: p5) => {
 
     //円錐
     p.translate(-240 * 2, 200, 0);
+    p.fill(red);
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
@@ -46,6 +53,7 @@ const sketch = (p: p5) => {
 
     //ドーナッツ
     p.translate(240, 0, 0);
+    p.fill(green);
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
@@ -54,6 +62,7 @@ const sketch = (p: p5) => {
     p.pop();
     //球体
     p.translate(240, 0, 0);
+    p.fill(blue);
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
