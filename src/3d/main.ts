@@ -10,15 +10,14 @@ const sketch = (p: p5) => {
     const red =p.color(255, 0, 0);
     const green =p.color(0, 255, 0);
     const blue =p.color(0, 0, 255);
-    //平面
+    //楕円
     p.translate(-240, -100, 0);
     p.normalMaterial();
-    p.fill(red);
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
     p.rotateY(p.frameCount * 0.01);
-    p.plane(70);
+    p.ellipsoid(30, 40, 40);
     p.pop();
 
     //立方体
