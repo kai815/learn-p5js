@@ -17,6 +17,7 @@ const sketch = (p: p5) => {
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
     p.rotateY(p.frameCount * 0.01);
+    p.fill(red);
     p.ellipsoid(30, 40, 40);
     p.pop();
 
