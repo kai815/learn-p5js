@@ -10,6 +10,8 @@ const sketch = (p: p5) => {
     const red =p.color(255, 0, 0);
     const green =p.color(0, 255, 0);
     const blue =p.color(0, 0, 255);
+    const yellow =p.color(255, 255, 0);
+    const pink =p.color(255, 0, 255);
     //楕円
     p.translate(-240, -100, 0);
     p.normalMaterial();
@@ -53,7 +55,7 @@ const sketch = (p: p5) => {
 
     //ドーナッツ
     p.translate(240, 0, 0);
-    p.fill(green);
+    p.fill(yellow);
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
@@ -62,7 +64,7 @@ const sketch = (p: p5) => {
     p.pop();
     //球体
     p.translate(240, 0, 0);
-    p.fill(blue);
+    p.fill(pink);
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
