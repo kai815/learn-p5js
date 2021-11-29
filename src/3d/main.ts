@@ -12,6 +12,7 @@ const sketch = (p: p5) => {
     const blue =p.color(0, 0, 255);
     const yellow =p.color(255, 255, 0);
     const pink =p.color(255, 0, 255);
+    const purple =p.color(120, 0, 120);
     //楕円
     p.translate(-240, -100, 0);
     p.normalMaterial();
@@ -45,7 +46,7 @@ const sketch = (p: p5) => {
 
     //円錐
     p.translate(-240 * 2, 200, 0);
-    p.fill(red);
+    p.fill(purple);
     p.push();
     p.rotateZ(p.frameCount * 0.01);
     p.rotateX(p.frameCount * 0.01);
